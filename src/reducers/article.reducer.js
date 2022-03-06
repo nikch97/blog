@@ -1,17 +1,17 @@
-import { userConstants } from "../constants";
+import { articleConstants } from "../constants";
 
-export function register(state={user:{},fetching:false, success:false, error:false}, action){
+export function save(state={article:{},fetching:false, success:false, error:false}, action){
 switch(action.type){
-    case userConstants.REGISTER_REQUEST:
+    case articleConstants.SAVE_REQUEST:
         return{
             fetching:true
         };
-    case userConstants.REGISTER_SUCCESS:
+    case articleConstants.SAVE_SUCCESS:
         return{
             fetching:false,
             success:true
         };
-    case userConstants.REGISTER_FAILURE:
+    case articleConstants.SAVE_FAILURE:
         return{
             fetching:false,
             error:action.error
@@ -21,19 +21,19 @@ switch(action.type){
 }
 };
 
-export function login(state={loginUser:{},fetching:false, success:false, error:false}, action){
+export function retrieve(state={retrieved:{},fetching:false, success:false, error:false}, action){
     switch(action.type){
-        case userConstants.LOGIN_REQUEST:
+        case articleConstants.RETRIEVE_REQUEST:
             return{
                 fetching:true
             };
-        case userConstants.LOGIN_SUCCESS:
+        case articleConstants.RETRIEVE_SUCCESS:
             return{
                 fetching:false,
                 success:true,
-                loginUser:action.user
+                retrieved:action.article
             };
-        case userConstants.LOGIN_FAILURE:
+        case articleConstants.RETRIEVE_FAILURE:
             return{
                 fetching:false,
                 error:action.error
@@ -43,19 +43,19 @@ export function login(state={loginUser:{},fetching:false, success:false, error:f
     }
     };
 
-    export function update(state={updateUser:{},fetching:false, success:false, error:false}, action){
+    export function update(state={updatedArticle:{},fetching:false, success:false, error:false}, action){
         switch(action.type){
-            case userConstants.UPDATE_REQUEST:
+            case articleConstants.UPDATE_REQUEST:
                 return{
                     fetching:true
                 };
-            case userConstants.UPDATE_SUCCESS:
+            case articleConstants.UPDATE_SUCCESS:
                 return{
                     fetching:false,
                     success:true,
-                    updateUser:action.user
+                    updatedArticle:action.article
                 };
-            case userConstants.UPDATE_FAILURE:
+            case articleConstants.UPDATE_FAILURE:
                 return{
                     fetching:false,
                     error:action.error

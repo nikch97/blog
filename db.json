@@ -1,15 +1,32 @@
 {
   "users": [
     {
-      "nickname": "",
-      "email": "",
-      "password": "",
+      "nickname": "nikoo",
+      "password": "1368",
       "id": 1
     },
     {
-      "nickname": "niloo",
-      "email": "nikchfree@gmail.com",
-      "password": "12345",
+      "nickname": "negar",
+      "email": "nikch.coursera@gmail.com",
+      "password": "1",
+      "id": 2
+    }
+  ],
+  "articles": [
+    {
+      "title": "My Article",
+      "main": "Hello, This is a Test Article",
+      "author": "niloofar",
+      "select": "Computer",
+      "date": "2022/03/06",
+      "id": 1
+    },
+    {
+      "title": "gdfg",
+      "main": "gd",
+      "author": "gdfg",
+      "select": "Sport",
+      "date": "2022/03/06",
       "id": 2
     }
   ]

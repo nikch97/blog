@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "../actions";
 
-const SignUp = () => {
+const Profile = () => {
+    const loginUser = JSON.parse(localStorage.getItem('loginUser'));
     const [user, setUser] = useState({
-        nickname:'',
-        email:'',
-        password:''
+        nickname:loginUser[0].nickname,
+        id:loginUser[0].id,
+        password:loginUser[0].password,
+        email:loginUser[0].email
     });
+
+
 
     const register = useSelector(state => state)
     const dispatch = useDispatch();
@@ -29,7 +33,7 @@ const SignUp = () => {
     const onSubmit = (e)=>{
         e.preventDefault();
         if(user){
-            dispatch(userActions.register(user));
+            dispatch(userActions.update(user));
         }
     }
     const handleChange = (e)=>{
@@ -38,14 +42,13 @@ const SignUp = () => {
     }
     return (<>
         <form onSubmit={onSubmit}>
+
             <input placeholder="Nickname" name="nickname" value={user.nickname} onChange={handleChange} type={'text'} />
-            <input placeholder="Email" name="email" value={user.email} onChange={handleChange} type={'email'} />
+            <input placeholder="Email" name="email" value={user.email} disabled type={'email'} />
             <input placeholder="Password" name="password" value={user.password} onChange={handleChange} type={'password'} />
-            <input value={'Sign Up'} type={'submit'} />
-            {register.error && <div>{register.error}</div>}
+            <input value={'Update'} type={'submit'} />
         </form>
-        {/* {posts} */}
     </>);
 }
 
-export default SignUp;
+export default Profile;
