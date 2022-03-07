@@ -43,7 +43,7 @@ export function retrieve(state={retrieved:{},fetching:false, success:false, erro
     }
     };
 
-    export function update(state={updatedArticle:{},fetching:false, success:false, error:false}, action){
+    export function change(state={updatedArticle:{},fetching:false, success:false, error:false}, action){
         switch(action.type){
             case articleConstants.UPDATE_REQUEST:
                 return{

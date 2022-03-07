@@ -1,36 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { articleActions } from "../actions";
+import { useNavigate} from 'react-router-dom';
 
 const Articles = () => {
-    const [user, setUser] = useState({
-       
-    });
     useEffect(()=>{
-        dispatch(articleActions.retrieve())
-    },[])
+        dispatch(articleActions.retrieve());
+    },[]); 
 
-
-    const articles = useSelector(state => state.retrieve.retrieved)
+    const [search, setSearch] = useState('');
     const dispatch = useDispatch();
-    console.log(useSelector(state => state.retrieve.retrieved));
-    const onSubmit = (e)=>{
-        // e.preventDefault();
-        // if(user){
-        //     dispatch(userActions.update(user));
-        // }
-    }
-   
-    const handleChange = (e)=>{
-        // const {name, value} = e.target;
-        // setUser({...user, [name]:value});
-    }
+    const navigate = useNavigate();
+    const result = useSelector(state => state.retrieve.retrieved);
+    const articles = search ==='' ? result : result.filter(f=>f.title.includes(search.toUpperCase())) ;
+
     return (<>
-        <form onSubmit={onSubmit}>
-            <input placeholder="Search Title..." name="search"  onChange={handleChange} type={'text'} />            
-            <input value={'Search'} type={'submit'} />
+        <form>
+            <input placeholder="Search Title..." name="search" value={search.toUpperCase()} 
+             onChange={(e)=>setSearch(e.target.value)} type={'text'} />            
+            {/* <input value={'Search'} type={'button'} /> */}
         </form>
+        <button onClick={()=>articles.sort().reverse()}>Sort</button>
         <br/>
+        {/* {articles && articles.length>0 && console.log(articles.reverse())} */}
         {articles && articles.length>0 && articles.map(article=>{
             return (
                 <div key={article.id}>
@@ -38,11 +30,14 @@ const Articles = () => {
                     <br/>
                     <text>{article.author}</text>
                     <text>{article.date}</text>
-                    <text>View More...</text>
+                     <button
+                     onClick={()=>{return navigate('/articleDetail',{state:article})}}>
+                     View More...
+                    </button>
 
                 </div>
             )
-        })}
+       })} 
     </>);
 }
 

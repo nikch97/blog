@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "../actions";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [user, setUser] = useState({
         email:'',
         password:''
     });
-
+    const navigate = useNavigate();
     const login = useSelector(state => state)
     const dispatch = useDispatch();
     // console.log(useSelector(state => state.login))
@@ -27,6 +28,10 @@ const Login = () => {
             <input placeholder="Email" name="email" value={user.email} onChange={handleChange} type={'email'} />
             <input placeholder="Password" name="password" value={user.password} onChange={handleChange} type={'password'} />
             <input value={'Login'} type={'submit'} />
+            <button
+                onClick={() => { return navigate('/') }}>
+                SignUp
+            </button>
             {login.error && <div>{login.error}</div>}
         </form>
     </>);

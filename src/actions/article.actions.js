@@ -4,7 +4,7 @@ import { articleServer } from "../servers";
 export const articleActions = {
     save,
     retrieve,
-    update
+    change
 };
 
 
@@ -49,10 +49,10 @@ function retrieve() {
     function failure(error){ return {type:articleConstants.RETRIEVE_FAILURE,error}}
 }
 
-function update(article) {
+function change(article) {
     return dispatch => {
         dispatch(request(article));
-        articleServer.update(article)                 
+        articleServer.change(article)                 
             .then(
                 article => {
                     dispatch(success(article.data));                   

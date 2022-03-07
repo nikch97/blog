@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "../actions";
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
     const loginUser = JSON.parse(localStorage.getItem('loginUser'));
@@ -13,7 +14,7 @@ const Profile = () => {
 
 
 
-    const register = useSelector(state => state)
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     // console.log(useSelector(state => state))
 // useEffect(()=>{
@@ -40,6 +41,11 @@ const Profile = () => {
         const {name, value} = e.target;
         setUser({...user, [name]:value});
     }
+
+    const logOut = ()=>{
+        localStorage.removeItem('loginUser');
+        window.location.replace('/login');
+    }
     return (<>
         <form onSubmit={onSubmit}>
 
@@ -48,6 +54,10 @@ const Profile = () => {
             <input placeholder="Password" name="password" value={user.password} onChange={handleChange} type={'password'} />
             <input value={'Update'} type={'submit'} />
         </form>
+        <button
+        onClick={logOut}>
+            Logout
+        </button>
     </>);
 }
 

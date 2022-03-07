@@ -9,7 +9,8 @@ const AddArticle = () => {
         main:'',
         author:'',
         select:'Sport',
-        date:date
+        date:date,
+        comments:[]
     });
 
     const register = useSelector(state => state)
@@ -41,7 +42,7 @@ const AddArticle = () => {
     }
     return (<>
         <form onSubmit={onSubmit}>
-            <input placeholder="Title" name="title" value={article.title} onChange={handleChange} type={'text'} required /> 
+            <input placeholder="Title" name="title" value={article.title.toUpperCase()} onChange={handleChange} type={'text'} required /> 
             <input placeholder="Author" name="author" value={article.author} onChange={handleChange} type={'text'} required/>
             <input name="date" disabled value={article.date}/>  
             <select name="select" value={article.select} onChange={handleChange} required>
