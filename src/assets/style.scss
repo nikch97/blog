@@ -1,0 +1,180 @@
+$background: #9adcff;
+$form-bg: #fff89a;
+$form-width: 40%;
+$input-border: rgba(128, 128, 128, 0.452) 1px solid;
+$input-height: 30px;
+$nav-bg: #ffb2a6;
+$font-black: #000;
+$link-hover: #ff8aae;
+$border-radius: 5px;
+$full:100%;
+$error:red;
+$success:rgb(42, 211, 42);
+
+html,
+body {
+    height: $full;
+    background-color: $background;
+}
+
+.App {
+    text-align: center;
+    align-content: center;
+}
+
+.form {
+    background-color: $form-bg;
+    width: $form-width;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.form {
+    input,
+    select,
+    textarea {
+        width: 50%;
+        margin: auto;
+        border-radius: $border-radius;
+        border: $input-border;
+        height: $input-height;
+        padding: 5px;
+    }
+    button {
+        width: 50%;
+        margin: auto;
+        border-radius: $border-radius;
+        border: $input-border;
+        height: $input-height;
+        margin-bottom: 40px;
+    }
+}
+
+nav {
+    background-color: $nav-bg;
+    height: 30px;
+    align-items: center;
+}
+
+nav {
+    .link {
+        color: $font-black;
+        text-decoration: none;
+        margin: 10px 20px;
+        padding: 10px;
+        border-radius: $border-radius;
+    }
+    .link:hover {
+        background-color: $link-hover;
+    }
+}
+.article-container {
+    display: flex;
+    flex-direction: column;
+    width: $full;
+}
+.article-container {
+    input {
+        margin-top: 10px;
+        border-radius: $border-radius;
+        border: $input-border;
+        height: $input-height;
+        padding: 5px;
+    }
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.article {
+    background-color: $link-hover;
+    width: $form-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.article {
+    .detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 20%;
+        border-radius: $border-radius;
+        border: $input-border;
+    }
+}
+
+.more-info {
+    background-color: $form-bg;
+    width: 80%;
+    border-radius: $border-radius;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.more-info {
+    .main {
+        text-align: justify;
+        padding: 20px;
+    }
+    .detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }  
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px; 
+    textarea {
+        width: 50%;
+        margin:auto;       
+        border-radius: $border-radius;
+        border: $input-border;
+        padding: 5px;
+    }
+    input {
+        width: 15%;             
+        border-radius: $border-radius;
+        border: $input-border;
+        height: $input-height;
+        align-self: flex-end;
+        position: absolute;
+
+    }
+}
+
+.comments{
+    width: $full;
+    background-color: $nav-bg;
+    padding-bottom: 60px;
+}
+
+.error{
+    color: $error;
+}
+
+.success{
+    color: $success;
+}

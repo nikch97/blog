@@ -1,6 +1,6 @@
 import { userConstants } from "../constants";
 
-export function register(state={user:{},fetching:false, success:false, error:false}, action){
+export function register(state={user:'',fetching:false, success:false, error:false}, action){
 switch(action.type){
     case userConstants.REGISTER_REQUEST:
         return{
@@ -9,7 +9,8 @@ switch(action.type){
     case userConstants.REGISTER_SUCCESS:
         return{
             fetching:false,
-            success:true
+            success:true,
+            user:action.user
         };
     case userConstants.REGISTER_FAILURE:
         return{
@@ -43,7 +44,7 @@ export function login(state={loginUser:{},fetching:false, success:false, error:f
     }
     };
 
-    export function update(state={updateUser:{},fetching:false, success:false, error:false}, action){
+    export function update(state={updateUser:'',fetching:false, success:false, error:false}, action){
         switch(action.type){
             case userConstants.UPDATE_REQUEST:
                 return{

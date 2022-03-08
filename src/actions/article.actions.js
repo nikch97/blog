@@ -14,8 +14,8 @@ function save(article) {
         articleServer.save(article)         
             .then(
                 article => {
-                    dispatch(success(article.data));
-                    // setTimeout(()=>window.location.replace('/articles'), 2000);                   
+                    dispatch(success('Article Added Successfully!'));
+                    setTimeout(()=>window.location.replace('/articles'), 1000);                   
                 },
                 error=>{
                     dispatch(failure(error.toString()));                   

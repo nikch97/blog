@@ -11,20 +11,14 @@ export const userActions = {
 function register(user) {
     return dispatch => {
         dispatch(request(user));
-        userServer.register(user)
-        // if(localStorage.getItem('user')){
-        //     dispatch(success(user));
-        // }else  
-        // dispatch(failure('Registration Unsuccessful'));   
+        userServer.register(user)  
             .then(
                 user => {
-                    dispatch(success(user.data));
-                    setTimeout(()=>window.location.replace('/login'), 2000);
-                    // dispatch(alertActions.success('Registration successful'));
+                    dispatch(success('Registration successful'));
+                    setTimeout(()=>window.location.replace('/login'), 1000);
                 },
                 error=>{
                     dispatch(failure(error.toString()));
-                    // dispatch(alertActions.error(error.toString()));
                 }
             )
     };
@@ -42,27 +36,14 @@ function login(user) {
                 if(res.data.length>0){
                     dispatch(success(res.data));
                     localStorage.setItem('loginUser', JSON.stringify(res.data));
-                    setTimeout(()=>window.location.replace('/profile'), 2000);
+                    window.location.replace('/profile');
                 }else 
-                dispatch(failure('User Not Found!'));          
-                // setTimeout(()=>window.location.replace('/profile'), 2000);
-                // dispatch(alertActions.success('Registration successful'));
+                dispatch(failure('User Not Found!'));                    
             },
             error=>{
                 dispatch(failure(error.toString()));
-                // dispatch(alertActions.error(error.toString()));
             }
         )
-    //     if(localStorage.getItem('loginUser')!=='[]'){
-    //         dispatch(success(localStorage.getItem('loginUser')));
-    //         window.location.replace('/profile');
-    //         // localStorage.clear();
-    //     }else  
-    //    { 
-    //     localStorage.clear();
-    //     dispatch(failure('User Not Found!'));
-           
-    //        }             
     };
     function request(user){ return {type:userConstants.LOGIN_REQUEST,user}}
     function success(user){ return {type:userConstants.LOGIN_SUCCESS,user}}
@@ -72,20 +53,14 @@ function login(user) {
 function update(user) {
     return dispatch => {
         dispatch(request(user));
-        userServer.update(user)
-        
-            // dispatch(success(user));
-        
-        // dispatch(failure('Registration Unsuccessful'));   
+        userServer.update(user)             
             .then(
-                user => {
-                    dispatch(success(user.data));
-                    // history.push('/login');
-                    // dispatch(alertActions.success('Registration successful'));
+                res => {
+                    dispatch(success('Update successful'));
+                    setTimeout(()=>window.location.replace('/login'), 1000);
                 },
                 error=>{
                     dispatch(failure(error.toString()));
-                    // dispatch(alertActions.error(error.toString()));
                 }
             )
     };

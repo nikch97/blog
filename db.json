@@ -1,69 +1,59 @@
 {
   "users": [
     {
-      "nickname": "nikoo",
-      "password": "1368",
+      "nickname": "Niloofar",
+      "password": "1",
+      "email": "nikolahchi@gmail.com",
       "id": 1
-    },
-    {
-      "nickname": "negar",
-      "password": "123",
-      "email": "nikch.coursera@gmail.com",
-      "id": 2
-    },
-    {
-      "nickname": "",
-      "email": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "nickname": "",
-      "email": "",
-      "password": "",
-      "id": 4
     }
   ],
   "articles": [
     {
-      "title": "My Article",
-      "main": "Hello, This is a Test Article",
-      "author": "niloofar",
-      "select": "Computer",
+      "title": "MY FIRST ARTICLE",
+      "main": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus libero condimentum dui dictum, at lobortis nulla tincidunt. Nulla vitae congue nisi, eu ornare tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis faucibus commodo urna nec ultrices. Vivamus sit amet facilisis erat. Suspendisse felis purus, maximus ac dui ut, eleifend ornare sem. Sed sodales mauris in scelerisque lacinia. Phasellus ultrices tristique purus, vitae auctor dui imperdiet nec. Mauris dui sapien, dictum ac magna at, lacinia euismod neque. Nullam ornare eget nisl ac hendrerit. Aenean ac ligula et ligula iaculis eleifend. Nulla sit amet orci a velit dapibus blandit a eu nisl. Curabitur sed rutrum tellus, quis consectetur lacus. Aenean sagittis quis justo sed malesuada. Donec fringilla nunc quis dignissim scelerisque. Maecenas id justo at tellus pretium bibendum.\n\nDonec tempor urna lorem, non vehicula augue viverra quis. Mauris a porta massa. Duis tempor feugiat mollis. Donec ex urna, sollicitudin at cursus nec, dignissim laoreet sem. Phasellus non leo sit amet enim laoreet euismod. Nullam vel tincidunt justo. Sed facilisis ligula eget turpis porttitor, non convallis ante imperdiet.\n\nNunc vitae semper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque tristique augue ac quam semper mattis. Suspendisse finibus vehicula pellentesque. Quisque ultrices odio lorem. Fusce finibus lorem diam, dictum facilisis eros cursus sit amet. Duis quam ex, accumsan ut rutrum a, gravida quis massa. In dignissim justo at dapibus tristique. Nulla ullamcorper tempus nisi non gravida.\n\nDonec rutrum ipsum nisl, ut congue ligula lacinia eget. Cras ut orci ac orci condimentum rhoncus non sit amet purus. Nullam porta aliquam massa, sed facilisis augue commodo in. Donec venenatis suscipit nisl. Nullam a massa sit amet metus malesuada luctus. Nam fermentum orci venenatis, aliquam nisi id, laoreet sem. Nam eget mattis sapien. Ut iaculis non lectus id gravida. Morbi libero velit, maximus id lacus eu, fringilla semper elit. Aenean ultricies tincidunt ultrices. Ut interdum leo vitae tortor finibus, sed semper magna malesuada. Nunc iaculis interdum eros, nec fermentum metus varius vitae. Sed ac dui et enim tincidunt commodo.\n\nMaecenas efficitur tincidunt nunc, quis finibus purus sodales in. Proin ultricies diam sed erat placerat pellentesque non in velit. Vestibulum pellentesque maximus urna vel semper. Fusce dignissim nisl non massa lobortis, ac malesuada lorem sagittis. Sed dictum magna non massa laoreet rutrum. Cras vehicula accumsan interdum. Etiam ultrices dui auctor sem bibendum, eget finibus elit condimentum. Morbi ut vulputate justo. Suspendisse potenti.",
+      "author": "Niloofar",
+      "select": "Sport",
       "date": "2022/03/06",
       "comments": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8"
+        "this is my favorite "
       ],
       "id": 1
     },
     {
-      "title": "gdfg",
-      "main": "gd",
-      "author": "gdfg",
-      "select": "Sport",
-      "date": "2022/03/06",
-      "comments": [
-        "1"
-      ],
+      "title": "MY SECOND ARTICLE",
+      "main": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus libero condimentum dui dictum, at lobortis nulla tincidunt. Nulla vitae congue nisi, eu ornare tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis faucibus commodo urna nec ultrices. Vivamus sit amet facilisis erat. Suspendisse felis purus, maximus ac dui ut, eleifend ornare sem. Sed sodales mauris in scelerisque lacinia. Phasellus ultrices tristique purus, vitae auctor dui imperdiet nec. Mauris dui sapien, dictum ac magna at, lacinia euismod neque. Nullam ornare eget nisl ac hendrerit. Aenean ac ligula et ligula iaculis eleifend. Nulla sit amet orci a velit dapibus blandit a eu nisl. Curabitur sed rutrum tellus, quis consectetur lacus. Aenean sagittis quis justo sed malesuada. Donec fringilla nunc quis dignissim scelerisque. Maecenas id justo at tellus pretium bibendum.\n\nDonec tempor urna lorem, non vehicula augue viverra quis. Mauris a porta massa. Duis tempor feugiat mollis. Donec ex urna, sollicitudin at cursus nec, dignissim laoreet sem. Phasellus non leo sit amet enim laoreet euismod. Nullam vel tincidunt justo. Sed facilisis ligula eget turpis porttitor, non convallis ante imperdiet.\n\nNunc vitae semper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque tristique augue ac quam semper mattis. Suspendisse finibus vehicula pellentesque. Quisque ultrices odio lorem. Fusce finibus lorem diam, dictum facilisis eros cursus sit amet. Duis quam ex, accumsan ut rutrum a, gravida quis massa. In dignissim justo at dapibus tristique. Nulla ullamcorper tempus nisi non gravida.\n\nDonec rutrum ipsum nisl, ut congue ligula lacinia eget. Cras ut orci ac orci condimentum rhoncus non sit amet purus. Nullam porta aliquam massa, sed facilisis augue commodo in. Donec venenatis suscipit nisl. Nullam a massa sit amet metus malesuada luctus. Nam fermentum orci venenatis, aliquam nisi id, laoreet sem. Nam eget mattis sapien. Ut iaculis non lectus id gravida. Morbi libero velit, maximus id lacus eu, fringilla semper elit. Aenean ultricies tincidunt ultrices. Ut interdum leo vitae tortor finibus, sed semper magna malesuada. Nunc iaculis interdum eros, nec fermentum metus varius vitae. Sed ac dui et enim tincidunt commodo.\n\nMaecenas efficitur tincidunt nunc, quis finibus purus sodales in. Proin ultricies diam sed erat placerat pellentesque non in velit. Vestibulum pellentesque maximus urna vel semper. Fusce dignissim nisl non massa lobortis, ac malesuada lorem sagittis. Sed dictum magna non massa laoreet rutrum. Cras vehicula accumsan interdum. Etiam ultrices dui auctor sem bibendum, eget finibus elit condimentum. Morbi ut vulputate justo. Suspendisse potenti.",
+      "author": "David",
+      "select": "Computer",
+      "date": "2022/03/07",
+      "comments": [],
       "id": 2
     },
     {
-      "title": "JAVASCRIPT",
-      "main": "This is my first Article!",
-      "author": "John",
-      "select": "Computer",
-      "date": "2022/03/07",
+      "title": "MY THIRD ARTICLE",
+      "main": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus libero condimentum dui dictum, at lobortis nulla tincidunt. Nulla vitae congue nisi, eu ornare tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis faucibus commodo urna nec ultrices. Vivamus sit amet facilisis erat. Suspendisse felis purus, maximus ac dui ut, eleifend ornare sem. Sed sodales mauris in scelerisque lacinia. Phasellus ultrices tristique purus, vitae auctor dui imperdiet nec. Mauris dui sapien, dictum ac magna at, lacinia euismod neque. Nullam ornare eget nisl ac hendrerit. Aenean ac ligula et ligula iaculis eleifend. Nulla sit amet orci a velit dapibus blandit a eu nisl. Curabitur sed rutrum tellus, quis consectetur lacus. Aenean sagittis quis justo sed malesuada. Donec fringilla nunc quis dignissim scelerisque. Maecenas id justo at tellus pretium bibendum.\n\nDonec tempor urna lorem, non vehicula augue viverra quis. Mauris a porta massa. Duis tempor feugiat mollis. Donec ex urna, sollicitudin at cursus nec, dignissim laoreet sem. Phasellus non leo sit amet enim laoreet euismod. Nullam vel tincidunt justo. Sed facilisis ligula eget turpis porttitor, non convallis ante imperdiet.\n\nNunc vitae semper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque tristique augue ac quam semper mattis. Suspendisse finibus vehicula pellentesque. Quisque ultrices odio lorem. Fusce finibus lorem diam, dictum facilisis eros cursus sit amet. Duis quam ex, accumsan ut rutrum a, gravida quis massa. In dignissim justo at dapibus tristique. Nulla ullamcorper tempus nisi non gravida.\n\nDonec rutrum ipsum nisl, ut congue ligula lacinia eget. Cras ut orci ac orci condimentum rhoncus non sit amet purus. Nullam porta aliquam massa, sed facilisis augue commodo in. Donec venenatis suscipit nisl. Nullam a massa sit amet metus malesuada luctus. Nam fermentum orci venenatis, aliquam nisi id, laoreet sem. Nam eget mattis sapien. Ut iaculis non lectus id gravida. Morbi libero velit, maximus id lacus eu, fringilla semper elit. Aenean ultricies tincidunt ultrices. Ut interdum leo vitae tortor finibus, sed semper magna malesuada. Nunc iaculis interdum eros, nec fermentum metus varius vitae. Sed ac dui et enim tincidunt commodo.\n\nMaecenas efficitur tincidunt nunc, quis finibus purus sodales in. Proin ultricies diam sed erat placerat pellentesque non in velit. Vestibulum pellentesque maximus urna vel semper. Fusce dignissim nisl non massa lobortis, ac malesuada lorem sagittis. Sed dictum magna non massa laoreet rutrum. Cras vehicula accumsan interdum. Etiam ultrices dui auctor sem bibendum, eget finibus elit condimentum. Morbi ut vulputate justo. Suspendisse potenti.",
+      "author": "Mary",
+      "select": "Sport",
+      "date": "2022/03/08",
       "comments": [
-        "hello"
+        "This is the best",
+        "I like this concept",
+        "I want to read more",
+        "I do not prefer this author",
+        "please write more",
+        "this is the sixth comment"
       ],
       "id": 3
+    },
+    {
+      "title": "MY NEW ARTICLe",
+      "main": "this is a sample article",
+      "author": "david",
+      "select": "Education",
+      "date": "2022/03/09",
+      "comments": [
+        "this is my favorite article"
+      ],
+      "id": 4
     }
   ]
 }

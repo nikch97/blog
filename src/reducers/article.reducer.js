@@ -1,6 +1,6 @@
 import { articleConstants } from "../constants";
 
-export function save(state={article:{},fetching:false, success:false, error:false}, action){
+export function save(state={article:'',fetching:false, success:false, error:false}, action){
 switch(action.type){
     case articleConstants.SAVE_REQUEST:
         return{
@@ -9,7 +9,8 @@ switch(action.type){
     case articleConstants.SAVE_SUCCESS:
         return{
             fetching:false,
-            success:true
+            success:true,
+            article:action.article
         };
     case articleConstants.SAVE_FAILURE:
         return{

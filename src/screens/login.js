@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "../actions";
 import { useNavigate } from 'react-router-dom';
@@ -9,9 +9,8 @@ const Login = () => {
         password:''
     });
     const navigate = useNavigate();
-    const login = useSelector(state => state)
+    const login = useSelector(state => state.login)
     const dispatch = useDispatch();
-    // console.log(useSelector(state => state.login))
 
     const onSubmit = (e)=>{
         e.preventDefault();
@@ -24,15 +23,16 @@ const Login = () => {
         setUser({...user, [name]:value});
     }
     return (<>
-        <form onSubmit={onSubmit}>            
-            <input placeholder="Email" name="email" value={user.email} onChange={handleChange} type={'email'} />
-            <input placeholder="Password" name="password" value={user.password} onChange={handleChange} type={'password'} />
+        <form className="form" onSubmit={onSubmit}>
+        {login.error && <b className="error">{login.error}</b>}  
+        <h2>Login</h2>          
+            <input placeholder="Email" name="email" value={user.email} onChange={handleChange} type={'email'} required/>
+            <input placeholder="Password" name="password" value={user.password} onChange={handleChange} type={'password'} required />
             <input value={'Login'} type={'submit'} />
             <button
                 onClick={() => { return navigate('/') }}>
                 SignUp
             </button>
-            {login.error && <div>{login.error}</div>}
         </form>
     </>);
 }

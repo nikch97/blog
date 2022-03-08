@@ -7,6 +7,7 @@ import Profile from './screens/profile';
 import AddArticle from './screens/addArticle';
 import Articles from './screens/articles';
 import ArticleDetail from './screens/articleDetail';
+import '../src/assets/style.scss'; 
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
         {localStorage.getItem('loginUser') &&
           <nav>
             {/* <Link to="login">Login</Link> */}
-            <Link to="profile">Profile</Link>
-            <Link to="addArticle">Add Article</Link>
-            <Link to="articles">Articles</Link>
+            <Link className='link' to="profile">Profile</Link>
+            <Link className='link' to="addArticle">Add Article</Link>
+            <Link className='link' to="articles">Articles</Link>
             {/* <Link to="articleDetail">Article Detail</Link> */}
           </nav>}
         <Routes>
